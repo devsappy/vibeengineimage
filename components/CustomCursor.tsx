@@ -8,7 +8,7 @@ export default function CustomCursor() {
   const [delayedPosition, setDelayedPosition] = useState({ x: 0, y: 0 })
   const [isPointer, setIsPointer] = useState(false)
   const [isHidden, setIsHidden] = useState(true)
-  const requestRef = useRef<number>()
+  const requestRef = useRef<number | undefined>(undefined)
 
   useEffect(() => {
     setIsMounted(true)
